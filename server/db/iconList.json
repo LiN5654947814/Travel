@@ -2,47 +2,47 @@
   "status": 0,
   "message": [{
       "id": "0001",
-      "imgUrl": "//s.qunarzz.com/homenode/images/touchheader/group.png",
+      "imgUrl": "../../../../static/img/imgIcons/01.png",
       "desc": "特惠酒店"
     },
     {
       "id": "0002",
-      "imgUrl": "//s.qunarzz.com/homenode/images/touchheader/bargainflight.png",
+      "imgUrl": "../../../../static/img/imgIcons/02.png",
       "desc": "低价机票"
     },
     {
       "id": "0003",
-      "imgUrl": "//s.qunarzz.com/homenode/images/touchheader/inn.png",
+      "imgUrl": "../../../../static/img/imgIcons/03.png",
       "desc": "客栈"
     },
     {
       "id": "0004",
-      "imgUrl": " //s.qunarzz.com/homenode/images/touchheader/haiwai.png",
+      "imgUrl": "../../../../static/img/imgIcons/04.png",
       "desc": "国外酒店"
     },
     {
       "id": "0005",
-      "imgUrl": "//s.qunarzz.com/homenode/images/touchheader/kezhan.png",
+      "imgUrl": "../../../../static/img/imgIcons/05.png",
       "desc": "民宿"
     },
     {
       "id": "0006",
-      "imgUrl": "//s.qunarzz.com/homenode/images/touchheader/bus.png",
+      "imgUrl": "../../../../static/img/imgIcons/06.png",
       "desc": "机票船票"
     },
     {
       "id": "0007",
-      "imgUrl": "//s.qunarzz.com/homenode/images/touchheader/freeTravel.png",
+      "imgUrl": "../../../../static/img/imgIcons/07.png",
       "desc": "自由行"
     },
     {
       "id": "0008",
-      "imgUrl": "//s.qunarzz.com/homenode/images/touchheader/tuan.png",
+      "imgUrl": "../../../../static/img/imgIcons/08.png",
       "desc": "旅游团购"
     },
     {
       "id": "0009",
-      "imgUrl": "//s.qunarzz.com/homenode/images/touchheader/tuan.png",
+      "imgUrl": "../../../../static/img/imgIcons/08.png",
       "desc": "旅游团购"
     }
   ]

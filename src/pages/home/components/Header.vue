@@ -1,9 +1,11 @@
 <template>
   <div class="header">
     <div class="header-left">
-      <div class="iconfont back-icon">
-        &#xe676;
-      </div>
+      <router-link to="/">
+        <div class="iconfont back-icon">
+          &#xe676;
+        </div>
+      </router-link>
     </div>
     <div class="header-input">
       <span class="iconfont">
@@ -39,6 +41,7 @@ export default {
     .back-icon {
       font-size: 25px;
       text-align: center;
+      color: white;
     }
   }
   .header-input {

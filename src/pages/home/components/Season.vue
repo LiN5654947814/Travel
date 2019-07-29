@@ -6,13 +6,13 @@
 
     <div class="season-container">
       <div class="season-top">
-        <img src="https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/e7f31fc26492cfcdcfd655315da67aa8.jpg"
+        <img src="../../../../static/img/imgSeason/01.jpg"
              alt="">
       </div>
 
       <div class="season-bottom">
         <div class="season-img-bottom">
-          <img src="https://imgs.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_256x160_3b3b3190.jpg"
+          <img src="../../../../static/img/imgSeason/02.jpg"
                alt="">
           <div class="season-bottom-title">长隆野生动物世界</div>
           <div class="season-desc">熊猫三胞胎，与您共享欢乐时光</div>
@@ -20,7 +20,7 @@
         </div>
 
         <div class="season-img-bottom">
-          <img src="https://imgs.qunarzz.com/sight/p0/1905/e6/e683c8cf5e97ce03a3.img.jpg_256x160_4ed67486.jpg"
+          <img src="../../../../static/img/imgSeason/03.jpg"
                alt="">
           <div class="season-bottom-title">世界之窗</div>
           <div class="season-desc">全球微缩景点，精彩演绎、娱乐项目应有尽有</div>
