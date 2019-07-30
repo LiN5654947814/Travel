@@ -13,7 +13,10 @@ Vue.config.productionTip = false
 FastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper /* { default global options } */)
 /* eslint-disable no-new */
-Vue.prototype.$axios = axios
+Vue.prototype.$axios = axios.create({
+  baseURL: 'http://localhost:3000/',
+  timeout: 1000
+})
 
 new Vue({
   el: '#app',

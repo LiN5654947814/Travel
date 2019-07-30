@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     getRecommendList () {
-      this.$axios.get('http://localhost:3000/recommendList').then((response) => {
+      this.$axios.get('/recommendList').then((response) => {
         if (response.data.status === 0) {
           this.travelItem = response.data.message
         }

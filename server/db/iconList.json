@@ -1,6 +1,7 @@
 {
   "status": 0,
-  "message": [{
+  "message": [
+    {
       "id": "0001",
       "imgUrl": "../../../../static/img/imgIcons/01.png",
       "desc": "特惠酒店"

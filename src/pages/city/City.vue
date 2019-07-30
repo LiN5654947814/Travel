@@ -2,7 +2,9 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list></city-list>
+    <city-list :cities="cities"
+               :hot="hotCities"></city-list>
+    <city-alphabet></city-alphabet>
   </div>
 </template>
 
@@ -10,14 +12,35 @@
 import CityHeader from './components/Header.vue'
 import CitySearch from './components/Search.vue'
 import CityList from './components/List.vue'
+import CityAlphabet from './components/Alphabet'
 
 export default {
   name: 'City',
   components: {
     CityHeader,
     CitySearch,
-    CityList
+    CityList,
+    CityAlphabet
 
+  },
+  data () {
+    return {
+      cities: {},
+      hotCities: []
+    }
+  },
+  created () {
+    this.getCityList()
+  },
+  methods: {
+    getCityList () {
+      this.$axios.get('/cityList').then((response) => {
+        if (response.data.ret === true) {
+          this.cities = response.data.data.cities
+          this.hotCities = response.data.data.hotCities
+        }
+      })
+    }
   }
 }
 </script>

@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     getIconsList () {
-      this.$axios.get('http://localhost:3000/iconList').then(response => {
+      this.$axios.get('/iconList').then(response => {
         if (response.data.status === 0) {
           this.iconList = response.data.message
         }
