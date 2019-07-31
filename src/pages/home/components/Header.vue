@@ -13,7 +13,7 @@
       </span>
       输入城市景点/游玩主题</div>
     <router-link to='/city'>
-      <div class="hedaer-right">城市
+      <div class="hedaer-right">{{$store.state.city}}
         <span class="iconfont city-icon">
           &#xe67a;
         </span>

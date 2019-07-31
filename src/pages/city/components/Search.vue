@@ -39,9 +39,16 @@ export default {
   props: {
     cities: Object
   },
+  mounted () {
+    this.scroll = new BScroll(this.$refs.search)
+  },
+  computed: {
+    hasNoData () {
+      return !this.list.length
+    }
+  },
   watch: {
     keyWord () {
-      this.list = null
       if (this.timer) {
         clearTimeout(this.timer)
       }
@@ -60,17 +67,8 @@ export default {
           })
         }
         this.list = result
-        console.log(this.list)
       }, 100)
     }
-  },
-  computed: {
-    hasNoData () {
-      return !this.list.length
-    }
-  },
-  mounted () {
-    this.scroll = new BScroll(this.$refs.search)
   }
 }
 </script>

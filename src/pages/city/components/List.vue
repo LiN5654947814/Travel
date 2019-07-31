@@ -9,7 +9,7 @@
         <div class="button-list">
           <div class="button-wrapper">
             <div class="button">
-              中山
+              {{$store.state.city}}
             </div>
           </div>
         </div>
@@ -22,7 +22,8 @@
 
           <div class="button-wrapper"
                v-for="(item,i) in hot"
-               :key="i">
+               :key="i"
+               @click="handleCityClick(item.name)">
             <div class="button">
               {{item.name}}
             </div>
@@ -58,6 +59,11 @@ export default {
     hot: Array,
     cities: Object,
     letter: String
+  },
+  methods: {
+    handleCityClick (city) { // 当改变city时候
+      this.$store.dispatch('changeCity', city) // 触发changeCity 把city传过去Vuex
+    }
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.wrapper)
