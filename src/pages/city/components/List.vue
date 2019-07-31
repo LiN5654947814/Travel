@@ -26,16 +26,21 @@
               {{item.name}}
             </div>
           </div>
-
         </div>
       </div>
 
-      <div class="title border-bottom">
-        A
+      <div class="area"
+           v-for="(item,i) in cities"
+           :key="i">
+        <div class="title border-bottom">
+          {{i}}
+        </div>
+        <div class="item-list"
+             v-for="(innerItem,i) in item"
+             :key="i">
+          <div class="item border-bottom">{{innerItem.name}}</div>
+        </div>
       </div>
-      <div class="item-list">
-      </div>
-
     </div>
   </div>
 </template>
