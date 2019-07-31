@@ -3,8 +3,10 @@
     <city-header></city-header>
     <city-search></city-search>
     <city-list :cities="cities"
-               :hot="hotCities"></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+               :hot="hotCities"
+               :letter="letter"></city-list>
+    <city-alphabet :cities="cities"
+                   @change="handLetterClick"></city-alphabet>
   </div>
 </template>
 
@@ -26,7 +28,8 @@ export default {
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   created () {
@@ -40,6 +43,9 @@ export default {
           this.hotCities = response.data.data.hotCities
         }
       })
+    },
+    handLetterClick (letter) {
+      this.letter = letter
     }
   }
 }
