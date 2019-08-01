@@ -1,7 +1,6 @@
 {
   "status": 0,
-  "message": [
-    {
+  "message": [{
       "id": "0001",
       "imgUrl": "../../../../static/img/imgRecommed/01.jpg",
       "itemImageInfo": "广州-丽江",
@@ -36,17 +35,17 @@
     {
       "id": "0005",
       "imgUrl": "../../../../static/img/imgRecommed/05.jpg",
-      "itemImageInfo": "广州-桂林",
-      "itemDesc": "5天跟团游",
-      "itemPrice": "1250",
-      "itemInfo": "含往返火车票+4晚住宿"
+      "itemImageInfo": "广州-巴厘岛",
+      "itemDesc": "6天跟团游",
+      "itemPrice": "5499",
+      "itemInfo": "含往返飞机(含税)+4晚住宿"
     },
     {
       "id": "0006",
       "imgUrl": "../../../../static/img/imgRecommed/06.jpg",
-      "itemImageInfo": "广州-日本",
-      "itemDesc": "7天跟团游",
-      "itemPrice": "5899",
+      "itemImageInfo": "广州-维也纳",
+      "itemDesc": "10天跟团游",
+      "itemPrice": "14186",
       "itemInfo": "含往返飞机票(含税)+6晚住宿"
     }
   ]

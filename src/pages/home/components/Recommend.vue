@@ -6,7 +6,8 @@
     <div class="recommend-item">
       <div class="item"
            v-for="item in travelItem"
-           :key="item.id">
+           :key="item.id"
+           @click="getRecommendInfo(item.id)">
         <div class="item-wrapper">
           <div class="item-img">
             <img :src="item.imgUrl"
@@ -48,6 +49,9 @@ export default {
           this.travelItem = response.data.message
         }
       })
+    },
+    getRecommendInfo (id) {
+      this.$router.push({ name: 'Detail', params: { id } })
     }
   }
 
