@@ -13,7 +13,7 @@
       </span>
       输入城市景点/游玩主题</div>
     <router-link to='/city'>
-      <div class="hedaer-right">{{$store.state.city}}
+      <div class="hedaer-right">{{city}}
         <span class="iconfont city-icon">
           &#xe67a;
         </span>
@@ -23,8 +23,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-
+  name: 'HomeHeader',
+  computed: {
+    ...mapState(['city'])// 扩展运算符，把state的ctiy赋给city
+  }
 }
 </script>
 
@@ -57,7 +61,8 @@ export default {
     padding-left: 5px;
   }
   .hedaer-right {
-    width: 62px;
+    min-width: 1.04rem;
+    padding-left: 0.1rem;
     float: right;
     text-align: center;
     line-height: 42px;
