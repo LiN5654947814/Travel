@@ -12,7 +12,8 @@
       </div>
     </div>
     <common-gallray v-show="flag"
-                    @close="handleGrallaryClose"></common-gallray>
+                    @close="handleGrallaryClose"
+                    :grallaryPhotos="grallaryPhotos"></common-gallray>
   </div>
 </template>
 
@@ -23,11 +24,21 @@ export default {
   name: 'DetailBanner',
   data () {
     return {
-      flag: false
+      flag: false,
+      id: this.$route.params.id,
+      grallaryPhotos: []
     }
+  },
+  created () {
+    this.getGrallaryList()
   },
   components: {
     CommonGallray
+  },
+  watch: {
+    id () {
+      this.id = this.$route.params.id
+    }
   },
   methods: {
     showGrallary () {
@@ -35,6 +46,14 @@ export default {
     },
     handleGrallaryClose () {
       this.flag = !this.flag
+    },
+    getGrallaryList () {
+      this.$axios.get('/gallaryPhotos/?id=' + this.id).then((response) => {
+        if (response.data != null) {
+          this.grallaryPhotos.splice(0, this.grallaryPhotos.length)
+          this.grallaryPhotos = response.data
+        }
+      })
     }
   }
 

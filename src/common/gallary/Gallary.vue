@@ -3,13 +3,10 @@
        @click="handleGrallaryClose">
     <div class="wrapper">
       <swiper :options="swiperOption">
-        <swiper-slide>
+        <swiper-slide v-for="(item,i) in grallaryPhotos"
+                      :key="i">
           <img class="swiper-img"
-               src="../../../static/img/imgRecommed/01/01.jpg"
-               alt="" /></swiper-slide>
-        <swiper-slide>
-          <img class="swiper-img"
-               src="../../../static/img/imgRecommed/01/02.jpg"
+               :src="item.imgUrl"
                alt="" /></swiper-slide>
         <div class="swiper-pagination"
              slot="pagination"></div>
@@ -33,15 +30,15 @@ export default {
         },
         observeParents: true,
         observer: true // 检测到父元素DOM变化时自我刷新
-      },
-      grallaryId: ''
+      }
     }
   },
   methods: {
     handleGrallaryClose () {
       this.$emit('close')
     }
-  }
+  },
+  props: ['grallaryPhotos']
 
 }
 </script>

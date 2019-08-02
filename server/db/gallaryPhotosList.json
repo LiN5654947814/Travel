@@ -1,7 +1,6 @@
 {
   "status": 0,
-  "message": [
-    {
+  "message": [{
       "id": "0001",
       "imgUrl": "../../../static/img/imgRecommed/01/01.jpg"
     },
