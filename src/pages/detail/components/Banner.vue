@@ -3,12 +3,12 @@
     <div class="banner"
          @click="showGrallary">
       <img class="banner-img"
-           src="../../../../static/img/imgRecommed/01/01.jpg"
+           :src="grallaryPhotos[0].imgUrl"
            alt="">
       <div class="banner-info">
-        <div class="banner-title">遇见时光•飞丽江（AAA景区)</div>
+        <div class="banner-title">{{grallaryPhotos[0].title}}</div>
         <div class="banner-numer"><span class="iconfont ">&#xe87c;
-          </span>39</div>
+          </span>{{grallaryPhotos.length}}</div>
       </div>
     </div>
     <common-gallray v-show="flag"
@@ -54,6 +54,9 @@ export default {
           this.grallaryPhotos = response.data
         }
       })
+    },
+    grallaryListLength (data) {
+      console.log(data)
     }
   }
 
