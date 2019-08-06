@@ -1,0 +1,20 @@
+{
+  "status": 0,
+  "message": [{
+      "id": "0001",
+      "imgUrl": "../../../static/img/imgSwiper/01.png"
+    },
+    {
+      "id": "0002",
+      "imgUrl": "../../../static/img/imgSwiper/02.png"
+    },
+    {
+      "id": "0003",
+      "imgUrl": "../../../static/img/imgSwiper/03.png"
+    },
+    {
+      "id": "0004",
+      "imgUrl": "../../../static/img/imgSwiper/04.png"
+    }
+  ]
+}

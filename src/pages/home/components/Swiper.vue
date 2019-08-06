@@ -7,7 +7,8 @@
         <img class="swiper-img"
              :src="item.imgUrl"
              alt="" /></swiper-slide>
-                     <div class="swiper-pagination" slot="pagination"></div>
+      <div class="swiper-pagination"
+           slot="pagination"></div>
     </swiper>
 
   </div>
@@ -29,21 +30,19 @@ export default {
           clickable: true
         }
       },
-      swiperList: [{
-        id: '0001',
-        imgUrl: '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/0677c297245b8a489ee12ab9b165c928.jpg_945x288_600cb364.jpg'
-      }, {
-        id: '0002',
-        imgUrl: '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/3f5ff03fa0c024b930f515e63ae2c702.jpg_945x288_7dff4510.jpg'
-      },
-      {
-        id: '0003',
-        imgUrl: '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/a685001bbf5e77a203ff8815e953efbe.jpg_945x288_52b6ec01.jpg'
-      },
-      {
-        id: '0004',
-        imgUrl: '//mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/b72df47942fb28fcd7bf481f01e785f5.jpg'
-      }]
+      swiperList: []
+    }
+  },
+  created () {
+    this.getSwiperList()
+  },
+  methods: {
+    getSwiperList () {
+      this.$axios.get('/swiperList').then((response) => {
+        if (response.data.status === 0) {
+          this.swiperList = response.data.message
+        }
+      })
     }
   }
 }

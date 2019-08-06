@@ -5,7 +5,12 @@ const recommendList = require('./db/recommendList')
 const cityList = require('./db/city.json')
 const gallaryPhotos = require('./db/gallaryPhotosList.json')
 const travelInfo = require('./db/travelInfo.json')
+const swiperList = require('./db/swiperList.json')
 const fs = require('fs')
+
+router.get('/swiperList', function (req, res) {
+  res.end(JSON.stringify(swiperList))
+})
 
 router.get('/iconList', function (req, res) {
   return res.end(JSON.stringify(iconList))
