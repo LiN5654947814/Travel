@@ -3,10 +3,10 @@
     <div class="banner"
          @click="showGrallary">
       <img class="banner-img"
-           :src="grallaryPhotos[0].imgUrl"
+           :src="imgUrl"
            alt="">
       <div class="banner-info">
-        <div class="banner-title">{{grallaryPhotos[0].title}}</div>
+        <div class="banner-title">{{title}}</div>
         <div class="banner-numer"><span class="iconfont ">&#xe87c;
           </span>{{grallaryPhotos.length}}</div>
       </div>
@@ -26,7 +26,9 @@ export default {
     return {
       flag: false,
       id: this.$route.params.id,
-      grallaryPhotos: []
+      grallaryPhotos: [],
+      imgUrl: '',
+      title: ''
     }
   },
   created () {
@@ -50,8 +52,9 @@ export default {
     getGrallaryList () {
       this.$axios.get('/gallaryPhotos/?id=' + this.id).then((response) => {
         if (response.data != null) {
-          this.grallaryPhotos.splice(0, this.grallaryPhotos.length)
           this.grallaryPhotos = response.data
+          this.imgUrl = response.data[0].imgUrl
+          this.title = response.data[0].title
         }
       })
     },

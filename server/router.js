@@ -4,6 +4,7 @@ const iconList = require('./db/iconList.json')
 const recommendList = require('./db/recommendList')
 const cityList = require('./db/city.json')
 const gallaryPhotos = require('./db/gallaryPhotosList.json')
+const travelInfo = require('./db/travelInfo.json')
 const fs = require('fs')
 
 router.get('/iconList', function (req, res) {
@@ -19,7 +20,7 @@ router.get('/cityList', function (req, res) {
 })
 
 router.get('/gallaryPhotos', function (req, res) {
-  let id = req.query.id // 获取path传参的值
+  const id = req.query.id // 获取path传参的值
   fs.readFile('./db/gallaryPhotosList.json', function (err, data) {
     var grallary = [] // 定义新数组接受根据传进来的id遍历JSON匹配的值
     if (err) {
@@ -36,6 +37,25 @@ router.get('/gallaryPhotos', function (req, res) {
       }
     }
     res.end(JSON.stringify(grallary)) // 将查询到匹配的数据转字符串以新数组的形式打印出来
+  })
+})
+
+router.get('/travelInfo', function (req, res) {
+  const id = req.query.id
+  fs.readFile('./db/travelInfo.json', function (err, data) {
+    var travelInfoList = []
+    if (err) {
+      res.end('err')
+    } else {
+      var travelList = JSON.parse(data.toString())
+      var travelArray = travelList.message
+      for (let i = 0; i < travelArray.length; i++) {
+        if (travelArray[i].id === id) {
+          travelInfoList.push(travelArray[i])
+        }
+      }
+    }
+    res.end(JSON.stringify(travelInfoList))
   })
 })
 module.exports = router

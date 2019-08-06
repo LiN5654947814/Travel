@@ -3,7 +3,7 @@
     <detail-banner></detail-banner>
     <detail-header></detail-header>
     <div class="content">
-      <detail-list :List=List></detail-list>
+      <detail-list></detail-list>
     </div>
   </div>
 </template>
@@ -18,20 +18,6 @@ export default {
     DetailBanner,
     DetailHeader,
     DetailList
-  },
-  data () {
-    return {
-      List: [{
-        title: '成人票'
-      },
-      {
-        title: '学生票'
-      }, {
-        title: '儿童票'
-      }, {
-        title: '特惠票'
-      }]
-    }
   }
 
 }

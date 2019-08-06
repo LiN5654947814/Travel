@@ -69,6 +69,7 @@ export default {
     background: rgba(0, 0, 0, 0.6);
     text-align: center;
     line-height: 0.8rem;
+    z-index: 9999;
     .header-abs-back {
       color: white;
     }
@@ -84,6 +85,7 @@ export default {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 9999;
     .header-back {
       color: white;
       width: 0.64rem;
@@ -92,6 +94,7 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 9999;
     }
   }
 }

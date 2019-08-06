@@ -57,7 +57,7 @@ export default {
 
           // console.log(index)
           // console.log('---------------------')
-          console.log('A的位置------------' + this.startY)
+          // console.log('A的位置------------' + this.startY)
           // console.log('触摸的位置------------------' + touchY)
         }, 16)
       }
