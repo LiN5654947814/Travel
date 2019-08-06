@@ -12,5 +12,6 @@ export default new Vuex.Store({
       ctx.commit('changeCity', city) // 借助context提供commit方法提交到mutations
     }
   },
+
   mutations: mutations
 })
