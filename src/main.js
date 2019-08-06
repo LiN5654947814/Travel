@@ -15,7 +15,7 @@ FastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper /* { default global options } */)
 /* eslint-disable no-new */
 Vue.prototype.$axios = axios.create({
-  baseURL: 'http://localhost:3000/',
+  baseURL: 'http://47.94.218.63:3000/',
   timeout: 1000
 })
 
