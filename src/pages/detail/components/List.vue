@@ -97,9 +97,11 @@ export default {
   .item-desc {
     .fieldset-nav {
       border: 1px solid black;
-      border-radius: 0.2rem;
       margin-bottom: 0.2rem;
       overflow: hidden;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
       legend {
         background-color: #00bcd4;
         border-radius: 0.2rem;
