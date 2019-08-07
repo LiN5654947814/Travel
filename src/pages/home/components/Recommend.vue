@@ -13,7 +13,7 @@
             <img :src="item.imgUrl"
                  alt="">
             <div class="item-img-info">
-              <span>{{item.itemImageInfo}}</span>
+              <span>{{city}}{{item.itemImageInfo}}</span>
               <div class="item-desc">
                 <span>{{item.itemDesc}}</span>
               </div>
@@ -36,7 +36,8 @@
 export default {
   data () {
     return {
-      travelItem: []
+      travelItem: [],
+      city: this.$store.state.city
     }
   },
   created () {

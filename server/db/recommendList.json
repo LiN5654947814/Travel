@@ -3,7 +3,7 @@
   "message": [{
       "id": "0001",
       "imgUrl": "../../../../static/img/imgRecommed/01.jpg",
-      "itemImageInfo": "广州-丽江",
+      "itemImageInfo": "-丽江",
       "itemDesc": "5天自由行",
       "itemPrice": "3860",
       "itemInfo": "含往返飞机票(含税)+4晚住宿"
@@ -11,7 +11,7 @@
     {
       "id": "0002",
       "imgUrl": "../../../../static/img/imgRecommed/02.jpg",
-      "itemImageInfo": "广州-三亚",
+      "itemImageInfo": "-三亚",
       "itemDesc": "5天跟团行",
       "itemPrice": "2450",
       "itemInfo": "含往返飞机票(含税)+4晚住宿"
@@ -19,7 +19,7 @@
     {
       "id": "0003",
       "imgUrl": "../../../../static/img/imgRecommed/03.jpg",
-      "itemImageInfo": "广州-桂林",
+      "itemImageInfo": "-桂林",
       "itemDesc": "6天跟团行",
       "itemPrice": "5999",
       "itemInfo": "含往返飞机票(含税)+4晚住宿"
@@ -27,7 +27,7 @@
     {
       "id": "0004",
       "imgUrl": "../../../../static/img/imgRecommed/04.jpg",
-      "itemImageInfo": "广州-泰国",
+      "itemImageInfo": "-泰国",
       "itemDesc": "6天跟团游",
       "itemPrice": "1099",
       "itemInfo": "含往返飞机票(含税)+4晚住宿"
@@ -35,7 +35,7 @@
     {
       "id": "0005",
       "imgUrl": "../../../../static/img/imgRecommed/05.jpg",
-      "itemImageInfo": "广州-巴厘岛",
+      "itemImageInfo": "-巴厘岛",
       "itemDesc": "6天跟团游",
       "itemPrice": "5499",
       "itemInfo": "含往返飞机(含税)+4晚住宿"
@@ -43,7 +43,7 @@
     {
       "id": "0006",
       "imgUrl": "../../../../static/img/imgRecommed/06.jpg",
-      "itemImageInfo": "广州-维也纳",
+      "itemImageInfo": "-维也纳",
       "itemDesc": "10天跟团游",
       "itemPrice": "14186",
       "itemInfo": "含往返飞机票(含税)+6晚住宿"

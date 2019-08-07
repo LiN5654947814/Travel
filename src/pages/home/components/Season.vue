@@ -80,13 +80,14 @@ export default {
         font-weight: 400;
       }
       .season-desc {
-        width: 3.42rem;
         padding-left: 0.1rem;
+        height: 0.4rem;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         color: #aaa;
-        font-size: 0.25rem;
+        font-size: 0.23rem;
+        line-height: 0.3rem;
       }
       .season-price {
         width: 0.88rem;

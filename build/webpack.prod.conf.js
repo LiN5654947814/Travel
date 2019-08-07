@@ -25,7 +25,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
-
+    publicPath: 'http://47.94.218.63/travel/',
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [

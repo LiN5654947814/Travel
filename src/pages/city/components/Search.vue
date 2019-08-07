@@ -42,7 +42,7 @@ export default {
     cities: Object
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.search)
+    this.scroll = new BScroll(this.$refs.search, { click: true })
   },
   computed: {
     hasNoData () {
