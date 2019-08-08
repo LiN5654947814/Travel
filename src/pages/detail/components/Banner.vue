@@ -19,7 +19,6 @@
 
 <script>
 import CommonGallray from '@/common/gallary/Gallary'
-
 export default {
   name: 'DetailBanner',
   data () {
@@ -38,16 +37,23 @@ export default {
     CommonGallray
   },
   watch: {
-    id () {
-      this.id = this.$route.params.id
+    // 查看图片时，禁止上下滑动
+    flag () {
+      if (this.flag === true) {
+        window.addEventListener('touchmove', this.StopScroll, { passive: false })
+      } else if (this.flag === false) {
+        window.removeEventListener('touchmove', this.StopScroll, { passive: false })
+      }
     }
   },
   methods: {
     showGrallary () {
       this.flag = !this.flag
+      this.$emit('closeBack', this.flag)
     },
     handleGrallaryClose () {
       this.flag = !this.flag
+      this.$emit('closeBack', this.flag)
     },
     getGrallaryList () {
       this.$axios.get('/gallaryPhotos/?id=' + this.id).then((response) => {
@@ -60,6 +66,10 @@ export default {
     },
     grallaryListLength (data) {
       console.log(data)
+    },
+    StopScroll (e) {
+      e.preventDefault()
+      e.stopPropagation()
     }
   }
 

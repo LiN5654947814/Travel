@@ -1,6 +1,7 @@
 <template>
   <div class="header-top">
-    <div class="header-abs">
+    <div class="header-abs"
+         v-show="!isFlag">
       <div class="header-abs-back"
            @click="BackHome"><span class="iconfont">&#xe676;
 
@@ -33,6 +34,9 @@ export default {
   },
   beforeDestroy () { // 跳转当前页面时候
     window.removeEventListener('scroll', this.handleScroll) // 解绑
+  },
+  props: {
+    isFlag: Boolean
   },
   methods: {
     BackHome () {

@@ -100,7 +100,7 @@ export default {
           color: white;
           text-align: center;
           line-height: 0.6rem;
-          font-size: 0.3rem;
+          font-size: 0.24rem;
           font-weight: 400;
           background: rgba(0, 0, 0, 0.6);
           position: absolute;
@@ -183,7 +183,7 @@ export default {
             color: white;
             text-align: center;
             line-height: 0.6rem;
-            font-size: 0.4rem;
+            font-size: 0.3rem;
             font-weight: 400;
             background: rgba(0, 0, 0, 0.6);
             position: absolute;

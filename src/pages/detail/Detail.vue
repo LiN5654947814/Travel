@@ -1,7 +1,7 @@
 <template>
   <div>
-    <detail-banner></detail-banner>
-    <detail-header></detail-header>
+    <detail-banner @closeBack="closeBack"></detail-banner>
+    <detail-header :isFlag="isFlag"></detail-header>
     <div class="content">
       <detail-list></detail-list>
     </div>
@@ -14,10 +14,21 @@ import DetailHeader from './components/Header'
 import DetailList from './components/List'
 export default {
   name: 'Detail',
+  data () {
+    return {
+      isFlag: false
+    }
+  },
   components: {
     DetailBanner,
     DetailHeader,
     DetailList
+  },
+  methods: {
+    closeBack (data) {
+      this.isFlag = data
+      console.log(this.isFlag)
+    }
   }
 
 }
